@@ -5,7 +5,7 @@
     "dev": "vite --mode development",
     "test": "vite --mode test",
     "prod": "vite --mode production",
-    "build": "vue-tsc --noEmit && vite build --mode production",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
