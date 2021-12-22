@@ -11,9 +11,9 @@ dependencies:
   vue: 3.2.26
 
 devDependencies:
-  '@vitejs/plugin-vue': 2.0.1_vite@2.7.4+vue@3.2.26
+  '@vitejs/plugin-vue': 2.0.1_vite@2.7.5+vue@3.2.26
   typescript: 4.5.4
-  vite: 2.7.4
+  vite: 2.7.5
   vue-tsc: 0.29.8_typescript@4.5.4
 
 packages:
@@ -52,14 +52,14 @@ packages:
     resolution: {integrity: sha512-8HqW8EVqjnCmWXVpqAOZf+EGESdkR27odcMMMGefgKXtar00SoYNSryGv//TELI4T3QFsECo78p+0lmalk/CFA==}
     dev: true
 
-  /@vitejs/plugin-vue/2.0.1_vite@2.7.4+vue@3.2.26:
+  /@vitejs/plugin-vue/2.0.1_vite@2.7.5+vue@3.2.26:
     resolution: {integrity: sha512-wtdMnGVvys9K8tg+DxowU1ytTrdVveXr3LzdhaKakysgGXyrsfaeds2cDywtvujEASjWOwWL/OgWM+qoeM8Plg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: 2.7.4
+      vite: 2.7.5
       vue: 3.2.26
     dev: true
 
@@ -84,7 +84,7 @@ packages:
     dependencies:
       upath: 2.0.1
       vscode-jsonrpc: 8.0.0-next.4
-      vscode-uri: 3.0.2
+      vscode-uri: 3.0.3
     dev: true
 
   /@volar/source-map/0.29.8:
@@ -743,8 +743,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /vite/2.7.4:
-    resolution: {integrity: sha512-f+0426k9R/roz5mRNwJlQ+6UOnhCwIypJSbfgCmsVzVJe9jTTM5iRX2GWYUean+iqPBWaU/dYLryx9AoH2pmrw==}
+  /vite/2.7.5:
+    resolution: {integrity: sha512-Bx8Iph9IJn6pWcErPkHKnyPABGMwK/vcdA0+V4TRC8TJFA7Zf6Xd1lRoUzsHHWUM8J+iUKKEuuNqqQUoxY3XvQ==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
@@ -778,7 +778,7 @@ packages:
       vscode-languageserver-textdocument: 1.0.3
       vscode-languageserver-types: 3.16.0
       vscode-nls: 5.0.0
-      vscode-uri: 3.0.2
+      vscode-uri: 3.0.3
     dev: true
 
   /vscode-html-languageservice/4.2.1:
@@ -787,7 +787,7 @@ packages:
       vscode-languageserver-textdocument: 1.0.3
       vscode-languageserver-types: 3.16.0
       vscode-nls: 5.0.0
-      vscode-uri: 3.0.2
+      vscode-uri: 3.0.3
     dev: true
 
   /vscode-json-languageservice/4.1.10:
@@ -797,7 +797,7 @@ packages:
       vscode-languageserver-textdocument: 1.0.3
       vscode-languageserver-types: 3.16.0
       vscode-nls: 5.0.0
-      vscode-uri: 3.0.2
+      vscode-uri: 3.0.3
     dev: true
 
   /vscode-jsonrpc/8.0.0-next.4:
@@ -861,8 +861,8 @@ packages:
     resolution: {integrity: sha512-8TEXQxlldWAuIODdukIb+TR5s+9Ds40eSJrw+1iDDA9IFORPjMELarNQE3myz5XIkWWpdprmJjm1/SxMlWOC8A==}
     dev: true
 
-  /vscode-uri/3.0.2:
-    resolution: {integrity: sha512-jkjy6pjU1fxUvI51P+gCsxg1u2n8LSt0W6KrCNQceaziKzff74GoWmjVG46KieVzybO1sttPQmYfrwSHey7GUA==}
+  /vscode-uri/3.0.3:
+    resolution: {integrity: sha512-EcswR2S8bpR7fD0YPeS7r2xXExrScVMxg4MedACaWHEtx9ftCF/qHG1xGkolzTPcEmjTavCQgbVzHUIdTMzFGA==}
     dev: true
 
   /vscode-vue-languageservice/0.29.8:
