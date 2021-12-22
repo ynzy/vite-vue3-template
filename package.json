@@ -1,6 +1,6 @@
 {
-  "name": "vue3-h5",
-  "version": "0.0.0",
+  "name": "vite-vue3-h5-template",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
