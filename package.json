@@ -2,8 +2,10 @@
   "name": "vite-vue3-h5-template",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "dev": "vite --mode development",
+    "test": "vite --mode test",
+    "prod": "vite --mode production",
+    "build": "vue-tsc --noEmit && vite build --mode production",
     "preview": "vite preview"
   },
   "dependencies": {

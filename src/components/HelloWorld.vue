@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 
 defineProps<{ msg: string }>()
+console.log(import.meta.env);
 
 const count = ref(0)
 </script>
