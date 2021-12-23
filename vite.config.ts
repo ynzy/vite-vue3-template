@@ -10,6 +10,11 @@ export default defineConfig({
       include: /\.(jsx|tsx)/,
     }),
   ],
+  resolve: {
+    alias: {
+      "@": "/src",
+    },
+  },
   server: {
     host: "0.0.0.0",
   },

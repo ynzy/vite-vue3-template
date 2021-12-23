@@ -10,6 +10,7 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 - [√ 配置多环境变量](#env)
 - [√ 集成 Tsx](#env)
+- [√ 配置 alias 别名](#alias)
 - [rem 适配方案](#rem)
 - [VantUI 组件按需加载](#vant)
 - [Sass 全局样式](#sass)
