@@ -171,3 +171,46 @@ export default defineConfig({
     },
   },
 ```
+
+## <span id="sass">✅ Sass 全局样式 </span>
+
+- 文档：https://cn.vitejs.dev/guide/features.html#css-pre-processors
+
+1. 安装依赖
+   使用`dart-sass`, 安装速度比较快，大概率不会出现安装不成功
+
+```js
+pnpm i -D sass
+```
+
+2. 使用
+   每个页面自己对应的样式都写在自己的 .vue 文件之中 `scoped` 它顾名思义给 css 加了一个域的概念。
+
+```html
+<style lang="scss">
+  /* global styles */
+</style>
+
+<style lang="scss" scoped>
+  /* local styles */
+</style>
+```
+
+### css modules
+
+- 目前测试只有在 tsx 中可以正常使用，vue-template 中可以导入在 js 中使用，`<template>` 中还不知道怎么使用
+- 定义一个 `*.module.scss` 或者 `*.module.css` 文件
+- 在 tsx 中使用
+
+```js
+import { defineComponent } from "vue";
+import classes from "@/styles/test.module.scss";
+export default defineComponent({
+  setup() {
+    console.log(classes);
+    return () => {
+      return <div class={`root  ${classes.moduleClass}`}>测试css-modules</div>;
+    };
+  },
+});
+```
