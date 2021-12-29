@@ -16,9 +16,10 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 - [√ 配置多环境变量](#env)
 - [√ 集成 Tsx](#tsx)
 - [√ 配置 alias 别名](#alias)
+- [√ Sass 全局样式](#sass)
+- [√ 识别 nodejs 内置模块](#node)
 - [rem 适配方案](#rem)
 - [VantUI 组件按需加载](#vant)
-- [Sass 全局样式](#sass)
 - [适配苹果底部安全距离](#phonex)
 - [使用 Mock 数据](#mock)
 - [Axios 封装及接口管理](#axios)
@@ -213,4 +214,30 @@ export default defineComponent({
     };
   },
 });
+```
+
+### vite 识别 sass 全局变量
+
+- vite.config.js 添加配置
+
+```js
+css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "@/styles/mixin.scss";
+          @import "@/styles/variables.scss";
+          `,
+      },
+    },
+  },
+```
+
+## <span id="node">✅ 识别 nodejs 内置模块 </span>
+
+- path 模块是 node.js 内置的功能，但是 node.js 本身并不支持 typescript，所以直接在 typescript 项目里使用是不行的
+- 解决方法：安装@types/node
+
+```js
+pnpn i -D @types/node
 ```
