@@ -6,6 +6,8 @@
     "test": "vite --mode test",
     "prod": "vite --mode production",
     "build": "vue-tsc --noEmit && vite build",
+    "build:test": "vue-tsc --noEmit && vite build",
+    "build:prod": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

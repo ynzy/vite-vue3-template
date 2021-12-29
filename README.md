@@ -219,7 +219,9 @@ export default defineComponent({
 
 ### vite 识别 sass 全局变量
 
-- vite.config.js 添加配置
+- 文档：https://cn.vitejs.dev/config/#css-preprocessoroptions
+
+* vite.config.js 添加配置
 
 ```js
 css: {
@@ -250,6 +252,8 @@ import { resolve } from "path";
 ```
 
 ## <span id="static">✅ 静态资源使用 </span>
+
+- 文档：https://cn.vitejs.dev/guide/features.html#static-assets
 
 ```js
 // staticTest.vue
