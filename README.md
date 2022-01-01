@@ -275,25 +275,19 @@ worker.onmessage = function (e) {
 
 ### 动态引入图片
 
+- 文档：https://cn.vitejs.dev/guide/assets.html#the-public-directory
 - 参考链接：https://juejin.cn/post/7030698018609315871
 
 - 使用`new URL` 和 `import.meta.url`时的问题
-- `import.meta.url` 获取到的是当前页面完整 url 地址，但是使用 `new URL` 拼接时，是当前调用时的路径拼接对应的参数
-- 比如：
+  - `import.meta.url` 获取到的是当前页面完整 url 地址
+  - `new URL` 中必须填写**相对路径**
+  - 打包不支持中文路径，暂时没解决`[vite:asset-import-meta-url] ENOENT: no such file or directory, open '/Users/zhangyong/code/oneself/template/vite-vue3-h5-template/src/assets/images/png/\u5E74\u7EC8\u603B\u7ED3.png'`
 
 ```js
 // src/components/HelloWorld.vue
-new URL("assets/images/年终总结.png", import.meta.url).href;
+new URL("../assets/images/png/year.png", import.meta.url).href;
 // import.meta.url 获取到的地址：http://192.168.124.4:3000/src/components/HelloWorld.vue?t=1641037446646
-// 拼接后的地址：http://192.168.124.4:3000/src/components/assets/images/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.pn
-```
-
-- 折中方案：使用 `new URL` + `location.href`（开发环境可用，生产环境没给打包）
-
-```js
-export const getImage = (name: string): string => {
-  return new URL(`/src/assets/images/${name}.png`, location.href).href;
-};
+// 拼接后的地址：http://192.168.124.4:3000/src/assets/images/png/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.png
 ```
 
 ## <span id="static">✅ 静态资源使用 </span>
