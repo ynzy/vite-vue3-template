@@ -30,7 +30,7 @@ worker.onmessage = function (e) {
 
 // console.log(import.meta.url);
 // console.log(imgUrl);
-const imgUrl = getImage('年终总结')
+const imgUrl = getImage('png/年终总结')
 console.log('年终总结图片',imgUrl);
 
 </script>

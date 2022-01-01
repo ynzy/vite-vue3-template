@@ -288,7 +288,7 @@ new URL("assets/images/年终总结.png", import.meta.url).href;
 // 拼接后的地址：http://192.168.124.4:3000/src/components/assets/images/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.pn
 ```
 
-- 折中方案：使用 `new URL` + `location.href`
+- 折中方案：使用 `new URL` + `location.href`（开发环境可用，生产环境没给打包）
 
 ```js
 export const getImage = (name: string): string => {
