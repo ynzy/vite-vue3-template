@@ -10,11 +10,12 @@ console.log('查看全局环境',import.meta.env);
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <!-- <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
 <DemoTsx/>
 <StyleVue/>
-<StaticTest/>
+<StaticTest/> -->
+  <router-view />
 </template>
 
 <style>

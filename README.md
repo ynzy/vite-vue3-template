@@ -19,13 +19,13 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 - [√ Sass 全局样式](#sass)
 - [√ 识别 nodejs 内置模块](#node)
 - [√ 静态资源使用](#static)
+- [Vue-router](#router)
 - [rem 适配方案](#rem)
 - [VantUI 组件按需加载](#vant)
 - [适配苹果底部安全距离](#phonex)
 - [使用 Mock 数据](#mock)
 - [Axios 封装及接口管理](#axios)
 - [Vuex 状态管理](#vuex)
-- [Vue-router](#router)
 - [ 配置 proxy 跨域](#proxy)
 - [vconsole 移动端调试](#vconsole)
 - [ 动态设置 title](#dyntitle)
@@ -290,4 +290,120 @@ new URL("../assets/images/png/year.png", import.meta.url).href;
 // 拼接后的地址：http://192.168.124.4:3000/src/assets/images/png/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93.png
 ```
 
-## <span id="static">✅ 静态资源使用 </span>
+## <span id="router">✅ Vue-router4 </span>
+
+- 文档：https://next.router.vuejs.org/zh/installation.html
+- composition-api 使用：https://next.router.vuejs.org/zh/guide/advanced/composition-api.html
+
+### 1. 安装依赖
+
+```ts
+pnpm install vue-router@4
+```
+
+### 2. 配置路由 api
+
+- 在 src 目录下，新建 router 文件夹，并在文件夹内创建
+  - index.ts 管理路由 api
+  - router.config.ts 管理路由信息
+
+```ts
+// router/index.ts
+import { createRouter, createWebHistory } from "vue-router";
+import { routes } from "./router.config";
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
+```
+
+```ts
+// router/router.config.ts
+import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+
+export const routes: Array<RouteRecordRaw> = [
+  {
+    path: "/",
+    name: "Home",
+    redirect: "/home",
+    meta: {
+      title: "首页",
+      keepAlive: false,
+    },
+    component: import("@/views/layouts/index.vue"),
+    children: [
+      {
+        path: "/home",
+        name: "Home",
+        component: import("@/views/home.vue"),
+        meta: { title: "首页", keepAlive: false, showTab: true },
+      },
+    ],
+  },
+];
+```
+
+### 3. mian 中引入 router
+
+```ts
+import { createApp } from "vue";
+import router from "./router";
+import App from "./App.vue";
+// 引入全局样式
+import "@/styles/index.scss";
+
+const app = createApp(App);
+app.use(router);
+app.mount("#app");
+```
+
+### 4. app.vue 和 layout 配置 router-view
+
+```ts
+// app.vue
+<script setup lang="ts">
+// This starter template is using Vue 3 <script setup> SFCs
+// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
+console.log('查看全局环境',import.meta.env);
+</script>
+
+<template>
+  <router-view />
+</template>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+```
+
+```ts
+// layouts/index.vue
+<script setup lang='ts'>
+import { useRoute } from 'vue-router';
+
+    const route = useRoute()
+    console.log(route.meta);
+
+</script>
+<template>
+    <div class="layout-content">
+        <keep-alive v-if="route.meta.keepAlive">
+            <router-view></router-view>
+        </keep-alive>
+        <router-view v-else></router-view>
+    </div>
+</template>
+<style lang='scss' scoped>
+
+</style>
+```

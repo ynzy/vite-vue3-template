@@ -23,7 +23,7 @@ export default ({ mode }) =>
     ],
     resolve: {
       alias: {
-        "@": "/src",
+        "@": resolve(__dirname, "src"),
       },
     },
     css: {
