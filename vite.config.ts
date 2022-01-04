@@ -64,7 +64,7 @@ export default ({ mode }) =>
       },
     },
     build: {
-      sourcemap: false,
+      sourcemap: true,
       outDir: handleOutDirByMode(mode),
       cssCodeSplit: false, // 禁用 CSS 代码拆分,将整个项目中的所有 CSS 将被提取到一个 CSS 文件中
       brotliSize: false, // 关闭打包计算
