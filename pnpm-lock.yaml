@@ -5,7 +5,7 @@ specifiers:
   '@vitejs/plugin-vue': ^2.0.0
   '@vitejs/plugin-vue-jsx': ^1.3.3
   pinia: ^2.0.9
-  pinia-plugin-persist: ^0.0.92
+  pinia-plugin-persistedstate: ^1.0.3
   sass: ^1.45.1
   typescript: ^4.4.4
   vite: ^2.7.2
@@ -15,7 +15,7 @@ specifiers:
 
 dependencies:
   pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
-  pinia-plugin-persist: 0.0.92_vue@3.2.26
+  pinia-plugin-persistedstate: 1.0.3_pinia@2.0.9
   vue: 3.2.26
   vue-router: 4.0.12_vue@3.2.26
 
@@ -738,7 +738,7 @@ packages:
     dev: true
 
   /esbuild-android-arm64/0.13.15:
-    resolution: {integrity: sha1-P8P/C6t2/jXdI3R2tdKzK7IKPUQ=}
+    resolution: {integrity: sha512-m602nft/XXeO8YQPUDVoHfjyRVPdPgjyyXOxZ44MK/agewFFkPa8tUo6lAzSWh5Ui5PB4KR9UIFTSBKh/RrCmg==}
     cpu: [arm64]
     os: [android]
     requiresBuild: true
@@ -746,7 +746,7 @@ packages:
     optional: true
 
   /esbuild-darwin-64/0.13.15:
-    resolution: {integrity: sha1-jpFpwWuvRE6s7GDQmyTRGyVajnI=}
+    resolution: {integrity: sha512-ihOQRGs2yyp7t5bArCwnvn2Atr6X4axqPpEdCFPVp7iUj4cVSdisgvEKdNR7yH3JDjW6aQDw40iQFoTqejqxvQ==}
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
@@ -754,7 +754,7 @@ packages:
     optional: true
 
   /esbuild-darwin-arm64/0.13.15:
-    resolution: {integrity: sha1-Gwf4k7YyEU+AXhiN38pBsrd4Ipo=}
+    resolution: {integrity: sha512-i1FZssTVxUqNlJ6cBTj5YQj4imWy3m49RZRnHhLpefFIh0To05ow9DTrXROTE1urGTQCloFUXTX8QfGJy1P8dQ==}
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
@@ -762,7 +762,7 @@ packages:
     optional: true
 
   /esbuild-freebsd-64/0.13.15:
-    resolution: {integrity: sha1-C4t+yhaQyOyUx1aAw4wHJpwfSoU=}
+    resolution: {integrity: sha512-G3dLBXUI6lC6Z09/x+WtXBXbOYQZ0E8TDBqvn7aMaOCzryJs8LyVXKY4CPnHFXZAbSwkCbqiPuSQ1+HhrNk7EA==}
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
@@ -770,7 +770,7 @@ packages:
     optional: true
 
   /esbuild-freebsd-arm64/0.13.15:
-    resolution: {integrity: sha1-LhpsaWv9zSCplXi3Y1C0HbGTTlI=}
+    resolution: {integrity: sha512-KJx0fzEDf1uhNOZQStV4ujg30WlnwqUASaGSFPhznLM/bbheu9HhqZ6mJJZM32lkyfGJikw0jg7v3S0oAvtvQQ==}
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
@@ -778,7 +778,7 @@ packages:
     optional: true
 
   /esbuild-linux-32/0.13.15:
-    resolution: {integrity: sha1-b9OfNvxm3UW2tfUVcox7vrw0Kmk=}
+    resolution: {integrity: sha512-ZvTBPk0YWCLMCXiFmD5EUtB30zIPvC5Itxz0mdTu/xZBbbHJftQgLWY49wEPSn2T/TxahYCRDWun5smRa0Tu+g==}
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
@@ -786,7 +786,7 @@ packages:
     optional: true
 
   /esbuild-linux-64/0.13.15:
-    resolution: {integrity: sha1-nLjkvNdXTmeUbk7l8fHhI4a7bdM=}
+    resolution: {integrity: sha512-eCKzkNSLywNeQTRBxJRQ0jxRCl2YWdMB3+PkWFo2BBQYC5mISLIVIjThNtn6HUNqua1pnvgP5xX0nHbZbPj5oA==}
     cpu: [x64]
     os: [linux]
     requiresBuild: true
@@ -794,7 +794,7 @@ packages:
     optional: true
 
   /esbuild-linux-arm/0.13.15:
-    resolution: {integrity: sha1-igDpnmoMbJprfzNIQTZNiitK7P4=}
+    resolution: {integrity: sha512-wUHttDi/ol0tD8ZgUMDH8Ef7IbDX+/UsWJOXaAyTdkT7Yy9ZBqPg8bgB/Dn3CZ9SBpNieozrPRHm0BGww7W/jA==}
     cpu: [arm]
     os: [linux]
     requiresBuild: true
@@ -802,7 +802,7 @@ packages:
     optional: true
 
   /esbuild-linux-arm64/0.13.15:
-    resolution: {integrity: sha1-OJGqNwTsV5obktKlhhIuW2or+6E=}
+    resolution: {integrity: sha512-bYpuUlN6qYU9slzr/ltyLTR9YTBS7qUDymO8SV7kjeNext61OdmqFAzuVZom+OLW1HPHseBfJ/JfdSlx8oTUoA==}
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
@@ -810,7 +810,7 @@ packages:
     optional: true
 
   /esbuild-linux-mips64le/0.13.15:
-    resolution: {integrity: sha1-NrB8xHw9IeSNs7sfTZ749Grq1Pc=}
+    resolution: {integrity: sha512-KlVjIG828uFPyJkO/8gKwy9RbXhCEUeFsCGOJBepUlpa7G8/SeZgncUEz/tOOUJTcWMTmFMtdd3GElGyAtbSWg==}
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
@@ -818,7 +818,7 @@ packages:
     optional: true
 
   /esbuild-linux-ppc64le/0.13.15:
-    resolution: {integrity: sha1-9+a7pAuaEeudyuWwFVDqBGcO2tI=}
+    resolution: {integrity: sha512-h6gYF+OsaqEuBjeesTBtUPw0bmiDu7eAeuc2OEH9S6mV9/jPhPdhOWzdeshb0BskRZxPhxPOjqZ+/OqLcxQwEQ==}
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
@@ -826,7 +826,7 @@ packages:
     optional: true
 
   /esbuild-netbsd-64/0.13.15:
-    resolution: {integrity: sha1-ov7cVJwrYp1YCnMthAcSsI1EADg=}
+    resolution: {integrity: sha512-3+yE9emwoevLMyvu+iR3rsa+Xwhie7ZEHMGDQ6dkqP/ndFzRHkobHUKTe+NCApSqG5ce2z4rFu+NX/UHnxlh3w==}
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
@@ -834,7 +834,7 @@ packages:
     optional: true
 
   /esbuild-openbsd-64/0.13.15:
-    resolution: {integrity: sha1-siwOWAbTofvwMlhyA3+IUwawXNc=}
+    resolution: {integrity: sha512-wTfvtwYJYAFL1fSs8yHIdf5GEE4NkbtbXtjLWjM3Cw8mmQKqsg8kTiqJ9NJQe5NX/5Qlo7Xd9r1yKMMkHllp5g==}
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
@@ -842,7 +842,7 @@ packages:
     optional: true
 
   /esbuild-sunos-64/0.13.15:
-    resolution: {integrity: sha1-0LZFSog3XujTlk2u/1XIXJHHzvQ=}
+    resolution: {integrity: sha512-lbivT9Bx3t1iWWrSnGyBP9ODriEvWDRiweAs69vI+miJoeKwHWOComSRukttbuzjZ8r1q0mQJ8Z7yUsDJ3hKdw==}
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
@@ -850,7 +850,7 @@ packages:
     optional: true
 
   /esbuild-windows-32/0.13.15:
-    resolution: {integrity: sha1-yW0Lm7tS8zAzIlgu+OSEfFrTdac=}
+    resolution: {integrity: sha512-fDMEf2g3SsJ599MBr50cY5ve5lP1wyVwTe6aLJsM01KtxyKkB4UT+fc5MXQFn3RLrAIAZOG+tHC+yXObpSn7Nw==}
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
@@ -858,7 +858,7 @@ packages:
     optional: true
 
   /esbuild-windows-64/0.13.15:
-    resolution: {integrity: sha1-H3nLmx4bsC+yXNQUy5DU6iiSwpQ=}
+    resolution: {integrity: sha512-9aMsPRGDWCd3bGjUIKG/ZOJPKsiztlxl/Q3C1XDswO6eNX/Jtwu4M+jb6YDH9hRSUflQWX0XKAfWzgy5Wk54JQ==}
     cpu: [x64]
     os: [win32]
     requiresBuild: true
@@ -866,7 +866,7 @@ packages:
     optional: true
 
   /esbuild-windows-arm64/0.13.15:
-    resolution: {integrity: sha1-SCFzBwgQ3yKnUsaGUJw3DDvjs8M=}
+    resolution: {integrity: sha512-zzvyCVVpbwQQATaf3IG8mu1IwGEiDxKkYUdA4FpoCHi1KtPa13jeScYDjlW0Qh+ebWzpKfR2ZwvqAQkSWNcKjA==}
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
@@ -918,7 +918,7 @@ packages:
     dev: true
 
   /fsevents/2.3.2:
-    resolution: {integrity: sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=}
+    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
@@ -1138,17 +1138,13 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pinia-plugin-persist/0.0.92_vue@3.2.26:
-    resolution: {integrity: sha1-UEOvLAR+FuSZBzBT26tJjfIg3yg=}
+  /pinia-plugin-persistedstate/1.0.3_pinia@2.0.9:
+    resolution: {integrity: sha512-f+mE3VpnrKcYUZ6zNTpICsZ+tPo/wxXS6i6ECJKV9fx2Ei5hEMrC6dxUrAWK9hKR4Y/MTt3XAWAHiM3lJtP3Jw==}
     peerDependencies:
-      '@vue/composition-api': ^1.0.0
-      vue: ^2.0.0 || >=3.0.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
+      pinia: ^2.0.0
     dependencies:
-      vue: 3.2.26
-      vue-demi: 0.11.4_vue@3.2.26
+      pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
+      shvl: 2.0.3
     dev: false
 
   /pinia/2.0.9_typescript@4.5.4+vue@3.2.26:
@@ -1326,6 +1322,10 @@ packages:
     dependencies:
       lru-cache: 6.0.0
     dev: true
+
+  /shvl/2.0.3:
+    resolution: {integrity: sha512-V7C6S9Hlol6SzOJPnQ7qzOVEWUQImt3BNmmzh40wObhla3XOYMe4gGiYzLrJd5TFa+cI2f9LKIRJTTKZSTbWgw==}
+    dev: false
 
   /source-map-js/1.0.1:
     resolution: {integrity: sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA==}
@@ -1527,21 +1527,6 @@ packages:
       vscode-pug-languageservice: 0.29.8
       vscode-typescript-languageservice: 0.29.8
     dev: true
-
-  /vue-demi/0.11.4_vue@3.2.26:
-    resolution: {integrity: sha1-YQGZL+RyTPVjQBihbpU/MFLpTio=}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: 3.2.26
-    dev: false
 
   /vue-demi/0.12.1_vue@3.2.26:
     resolution: {integrity: sha1-9+GO++z/0RqwadFHLXoG4xm0F0w=}

@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "pinia": "^2.0.9",
-    "pinia-plugin-persist": "^0.0.92",
+    "pinia-plugin-persistedstate": "^1.0.3",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
