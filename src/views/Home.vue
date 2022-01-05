@@ -18,6 +18,7 @@ const updateUserState = () => {
     age: age + 1
   })
 }
+console.log('修改代码测试提交校验')
 </script>
 <template>
   <div>姓名：{{ name }}</div>
