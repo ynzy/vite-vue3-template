@@ -5,11 +5,10 @@ import HelloWorld from './components/HelloWorld.vue'
 import DemoTsx from '@/test/demo'
 import StyleVue from '@/test/style'
 import StaticTest from '@/test/staticTest.vue'
-import { useRoute } from 'vue-router';
-console.log('查看全局环境',import.meta.env);
+import { useRoute } from 'vue-router'
+console.log('查看全局环境', import.meta.env)
 const route = useRoute()
-console.log(route);
-
+console.log(route)
 </script>
 
 <template>

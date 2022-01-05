@@ -21,6 +21,7 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 - [√ 静态资源使用](#static)
 - [√ Vue-router](#router)
 - [√ Pinia 状态管理](#pinia)
+- [Eslint + Prettier 统一开发规范](#prettier)
 - [rem 适配方案](#rem)
 - [VantUI 组件按需加载](#vant)
 - [适配苹果底部安全距离](#phonex)
@@ -31,7 +32,6 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 - [ 动态设置 title](#dyntitle)
 - [ 本地存储 storage 封装](#storage)
 - [ 配置 Jssdk](#jssdk)
-- [Eslint + Pettier 统一开发规范](#pettier)
 
 ## <span id="env">✅ 配置 ip 访问项目 </span>
 
@@ -589,4 +589,12 @@ export const useUserStore = defineStore({
     overwrite: true,
   },
 });
+```
+
+## <span id="prettier">✅ Eslint + Prettier 统一开发规范 </span>
+
+### 1. 安装依赖
+
+```js
+pnpm i -D eslint eslint-plugin-vue prettier @vue/eslint-config-prettier @vue/eslint-config-typescript
 ```

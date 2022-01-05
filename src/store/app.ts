@@ -4,11 +4,11 @@ export const useAppStore = defineStore({
   id: 'app',
   state: () => {
     return {
-        config: 'app'
+      config: 'app'
     }
   },
   actions: {
-    setData(data:any) {
+    setData(data: any) {
       console.log(data)
       this.config = data
     }
