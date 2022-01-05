@@ -19,6 +19,14 @@ const updateUserState = () => {
   })
 }
 console.log('修改代码测试提交校验')
+fetch('/basic-api/getUserInfo')
+  .then((r) => r.json())
+  .then((res) => {
+    console.log('测试mock数据', res)
+  })
+  .catch((err) => {
+    console.log('请求失败数据', err)
+  })
 </script>
 <template>
   <div>姓名：{{ name }}</div>

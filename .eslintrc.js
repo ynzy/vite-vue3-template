@@ -13,7 +13,7 @@ module.exports = {
     'vue/setup-compiler-macros': true
   },
   parserOptions: {
-    ecmaVersion: 12
+    ecmaVersion: 2020
   },
   rules: {
     'prettier/prettier': 'warn',

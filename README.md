@@ -23,15 +23,14 @@ Since TypeScript cannot handle type information for `.vue` imports, they are shi
 - [√ Pinia 状态管理](#pinia)
 - [√ Eslint + Prettier 统一开发规范](#prettier)
 - [√ husky + lint-staged 提交校验](#husky)
+- [使用 Mock 数据](#mock)
+- [Axios 封装及接口管理](#axios)
 - [rem 适配方案](#rem)
 - [VantUI 组件按需加载](#vant)
 - [适配苹果底部安全距离](#phonex)
-- [使用 Mock 数据](#mock)
-- [Axios 封装及接口管理](#axios)
 - [ 配置 proxy 跨域](#proxy)
 - [vconsole 移动端调试](#vconsole)
 - [ 动态设置 title](#dyntitle)
-- [ 本地存储 storage 封装](#storage)
 - [ 配置 Jssdk](#jssdk)
 
 ## <span id="env">✅ 配置 ip 访问项目 </span>
@@ -708,4 +707,11 @@ npx husky add .husky/pre-commit "npx lint-staged" // pre-commit 执行 npx lint-
     "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix"
   ]
 }
+```
+
+## <span id="mock">✅ 使用 Mock 数据 </span>
+* 文档：https://github.com/vbenjs/vite-plugin-mock
+### 1. 安装依赖
+```js
+
 ```
