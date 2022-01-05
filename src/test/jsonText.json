@@ -6,15 +6,10 @@
     "test": "vite --mode test",
     "prod": "vite --mode production",
     "build": "vue-tsc --noEmit && vite build",
-    "build:test": "vue-tsc --noEmit && vite build",
-    "build:prod": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.0.9",
-    "pinia-plugin-persistedstate": "^1.0.3",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.12"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
     "@types/node": "^12.20.39",
