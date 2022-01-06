@@ -3,6 +3,7 @@ import { useUserStore } from '@/store/user'
 import { useAppStore } from '@/store/app'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
+import axios from 'axios'
 const userStore = useUserStore()
 const appStore = useAppStore()
 console.log(appStore.config)
@@ -19,8 +20,8 @@ const updateUserState = () => {
   })
 }
 console.log('修改代码测试提交校验')
-fetch('/basic-api/getUserInfo')
-  .then((r) => r.json())
+axios
+  .get('/basic-api/getUserInfo')
   .then((res) => {
     console.log('测试mock数据', res)
   })
