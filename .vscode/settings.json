@@ -1,0 +1,24 @@
+{
+    "editor.formatOnSave": false, // 每次保存的时候自动格式化
+    "editor.formatOnPaste": true, // 自动格式化粘贴内容
+    "editor.tabCompletion": "on", // tab 自动补全
+    "editor.codeActionsOnSave": { // 保存时使用 ESLint 修复可修复错误
+        "source.fixAll": true,
+        "source.fixAll.eslint": true, // 保存时使用 ESLint 修复可修复错误
+        // "source.fixAll.stylelint": true
+    },
+    // 文件设置
+    "files.eol": "\n", // 默认行尾字符。 git全局配置 git config --global core.autocrlf false
+    // eslint 设置
+    "eslint.alwaysShowStatus": true, // 总是在 VSCode 显示 ESLint 的状态
+    "eslint.probe": [ // eslint 校验的语言类型 - 新版
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "tsx"
+    ],
+}
