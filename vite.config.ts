@@ -14,8 +14,9 @@ function handleOutDirByMode(mode) {
   return 'dist'
 }
 // https://vitejs.dev/config/
-export default ({ mode, command }: ConfigEnv): UserConfigExport =>
-  defineConfig({
+export default ({ mode, command }: ConfigEnv): UserConfigExport => {
+  const isBuild = command === 'build'
+  return defineConfig({
     plugins: [
       vue(),
       vueJsx({
@@ -24,8 +25,8 @@ export default ({ mode, command }: ConfigEnv): UserConfigExport =>
       viteMockServe({
         ignore: /^_/,
         mockPath: 'mock',
-        localEnabled: true,
-        prodEnabled: true,
+        localEnabled: !isBuild,
+        prodEnabled: isBuild,
         injectCode: `
           import { setupProdMockServer } from '../mock/_createProductionServer';
           setupProdMockServer();
@@ -101,3 +102,4 @@ export default ({ mode, command }: ConfigEnv): UserConfigExport =>
       }
     }
   })
+}
