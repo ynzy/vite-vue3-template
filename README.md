@@ -9,6 +9,15 @@ This template should help get you started developing with Vue 3 and Typescript i
 ## Type Support For `.vue` Imports in TS
 
 Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+## 项目启动
+* 项目采用 pnpm 包管理器,如果没有请先安装 pnpm
+```js
+npm i -g pnpm // 全局安装 pnpm
+pnpm install // 安装依赖
+pnpm dev // 开发
+pnpm build // 打包
+pnpm preview
+```
 
 # <span id="top">目录</span>
 
